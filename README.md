@@ -1,2 +1,2 @@
 # sandbox1
-Created with CodeSandbox
+A sandbox to try out framer-motion, different animations for each box.
