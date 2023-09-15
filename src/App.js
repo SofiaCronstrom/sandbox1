@@ -39,6 +39,13 @@ export default function App() {
           setHover(!hover);
         }}
       ></motion.div>
+       <motion.div
+        className="box"
+        whileHover={{scale: 1.2}}
+        whileTap={{scale: 1.1}}
+        drag
+        dragConstraints={{right: 100, left: -100}}
+      ></motion.div>
     </div>
   );
 }
