@@ -22,16 +22,16 @@ export default function App() {
       ></motion.div>
       <motion.div
         className="box"
-        animate={{ y: move ? 100 : -100 }}
-        transition={{ type: "tween", duration: 0 }}
+        animate={{ rotate: move ? 180 : 0 }}
+        transition={{ type: "inertia", velocity: 100 }}
         onClick={() => {
           setMove(!move);
         }}
       ></motion.div>
-      <motion.div
+        <motion.div
         className="box"
         animate={{ y: hover ? 100 : -20 }}
-        transition={{ type: "tween", duration: 0.5 }}
+        transition={{ type: "intertia", duration: 0.5 }}
         onMouseEnter={() => {
           setHover(!hover);
         }}
@@ -39,12 +39,12 @@ export default function App() {
           setHover(!hover);
         }}
       ></motion.div>
-       <motion.div
+      <motion.div
         className="box"
-        whileHover={{scale: 1.2}}
-        whileTap={{scale: 1.1}}
+        whileHover={{ scale: 1.2 }}
+        whileTap={{ scale: 1.1 }}
         drag
-        dragConstraints={{right: 100, left: -100}}
+        dragConstraints={{ right: 100, left: -100 }}
       ></motion.div>
     </div>
   );
