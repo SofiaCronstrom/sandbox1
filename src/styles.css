@@ -32,3 +32,10 @@ html {
 
   box-shadow: -4px -2px 5px -4px rgba(143, 138, 138, 0.75);
 }
+
+.box1 {
+  height: 50px;
+  width: 50px;
+  border-radius: 58% 43% 33% 64% / 50% 38% 53% 50%;
+  background: pink;
+}

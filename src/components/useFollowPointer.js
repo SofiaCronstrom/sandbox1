@@ -17,7 +17,7 @@ export function useFollowPointer() {
     window.addEventListener("pointermove", handlePointerMove);
 
     return () => {
-      window.removeEventListener("pointermove", handlePointerMOve);
+      window.removeEventListener("pointermove", handlePointerMove);
     };
   }, []);
 

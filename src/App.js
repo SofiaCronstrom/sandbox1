@@ -1,4 +1,6 @@
 import "./styles.css";
+import {useFollowPointer} from "./components/useFollowPointer";
+import Box from "./components/Box";
 import { motion } from "framer-motion";
 import * as React from "react";
 
@@ -6,9 +8,12 @@ export default function App() {
   const [rotate, setRotate] = React.useState(false);
   const [move, setMove] = React.useState(false);
   const [hover, setHover] = React.useState(false);
-
+  
+  const {ref, point} = useFollowPointer();
   return (
+    
     <div className="App">
+      <Box ref={ref} point={point}/>
       <motion.div
         className="box"
         animate={{ y: -1, scale: 1 }}
